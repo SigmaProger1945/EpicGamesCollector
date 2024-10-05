@@ -10,11 +10,11 @@ type EditDb struct {
 }
 
 func NewEditDb() (*EditDb, error) {
-	var db, Err = gorm.Open(sqlite.Open("db/db.db"), &gorm.Config{})
-	if Err != nil {
-		return nil, Err
+	var db, err = gorm.Open(sqlite.Open("db/db.db"), &gorm.Config{})
+	if err != nil {
+		return nil, err
 	}
-	db.AutoMigrate(&GameList{} /*&Proxy{}*/)
+	db.AutoMigrate(&GameList{})
 	return &EditDb{Db: db}, nil
 }
 
