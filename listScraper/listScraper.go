@@ -33,7 +33,7 @@ func ParseGameList(listpath string) error {
 	doc.Find("table tbody").Each(func(_ int, tr *goquery.Selection) {
 		tr.Find("tr").Each(func(ix int, td *goquery.Selection) {
 			t := td.Find("td").Eq(1)
-			game := RemoveSpace(strings.ToLower(string(t.Text())))
+			game := FormatText(string(t.Text()))
 			if IsGameInList("listScraper/gameList.txt", game) {
 				return
 			}
@@ -44,11 +44,6 @@ func ParseGameList(listpath string) error {
 				return
 			}
 			counter++
-			/*res := Db.Db.First(&gamelist, "game = ?", game)
-			if res.Error != gorm.ErrRecordNotFound {
-				return
-				}
-				Db.AddGame(RemoveSpace(game))*/
 		})
 		fmt.Println("Successful filewrite")
 	})
@@ -75,6 +70,9 @@ func IsGameInList(filepath string, title string) bool {
 		return false
 	}
 	return false
+}
+func FormatText(s string) string {
+	return RemoveSpace(strings.ToLower(s))
 }
 
 func RemoveSpace(s string) string {

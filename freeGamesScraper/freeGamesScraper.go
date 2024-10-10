@@ -55,7 +55,7 @@ func CheckFreeGame() (string, bool, error) {
 
 	for _, element := range elements {
 		if element.Price.TotalPrice.DiscountPrice == 0 {
-			if listscraper.IsGameInList("listScraper/gameList.txt", element.Title) {
+			if listscraper.IsGameInList("listScraper/gameList.txt", listscraper.FormatText(element.Title)) {
 				return element.Title, true, nil
 			}
 		}
