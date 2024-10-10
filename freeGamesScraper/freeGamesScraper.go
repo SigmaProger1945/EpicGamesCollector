@@ -5,23 +5,21 @@ import (
 	"fmt"
 	"io"
 	"log"
-	db "main/db"
+	listscraper "main/listScraper"
 	"net/http"
-
-	"gorm.io/gorm"
 )
 
 type FreeGamesPromotions struct {
-	Data FreeGamesPromotionsData `json:"data`
+	Data FreeGamesPromotionsData `json:"data"`
 }
 type FreeGamesPromotionsData struct {
-	Catalog FreeGamesPromotionsCatalog `json:"Catalog`
+	Catalog FreeGamesPromotionsCatalog `json:"Catalog"`
 }
 type FreeGamesPromotionsCatalog struct {
-	SearchStore FreeGamesPromotionsSearchStore `json:"searchStore`
+	SearchStore FreeGamesPromotionsSearchStore `json:"searchStore"`
 }
 type FreeGamesPromotionsSearchStore struct {
-	Elements []FreeGamesPromotionsElements `json:"elements`
+	Elements []FreeGamesPromotionsElements `json:"elements"`
 }
 type FreeGamesPromotionsElements struct {
 	Title string                   `json:"title"`
@@ -51,23 +49,16 @@ func CheckFreeGame() (string, bool, error) {
 		log.Fatal(err)
 	}
 	elements := freeGamesPromotions.Data.Catalog.SearchStore.Elements
-	Db, err := db.NewEditDb()
 	if err != nil {
 		return "", false, err
 	}
 
 	for _, element := range elements {
 		if element.Price.TotalPrice.DiscountPrice == 0 {
-			if IsGameInList(Db, element.Title) {
+			if listscraper.IsGameInList("listScraper/gameList.txt", element.Title) {
 				return element.Title, true, nil
 			}
 		}
 	}
 	return "", false, fmt.Errorf("game not found")
-}
-
-func IsGameInList(database *db.EditDb, title string) bool {
-	var gamelist db.GameList
-	res := database.Db.First(&gamelist, "game = ?", title).Error
-	return res != gorm.ErrRecordNotFound
 }
