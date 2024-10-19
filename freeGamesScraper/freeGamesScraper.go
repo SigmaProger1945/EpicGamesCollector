@@ -22,8 +22,18 @@ type FreeGamesPromotionsSearchStore struct {
 	Elements []FreeGamesPromotionsElements `json:"elements"`
 }
 type FreeGamesPromotionsElements struct {
-	Title string                   `json:"title"`
-	Price FreeGamesPromotionsPrice `json:"price"`
+	Title               string                      `json:"title"`
+	Price               FreeGamesPromotionsPrice    `json:"price"`
+	UpcommingPromotions FreeGamesUpcommingPromotion `json:"promotions"`
+}
+type FreeGamesUpcommingPromotion struct {
+	UpcommingPromotionalOffers []FreeGamesUpcommingPromotionalOffers `json:"upcomingPromotionalOffers"`
+}
+type FreeGamesUpcommingPromotionalOffers struct {
+	PromotionalOffers []FreeGamesPromotionalOffers `json:"promotionalOffers"`
+}
+type FreeGamesPromotionalOffers struct {
+	StartDate string `json:"startDate"`
 }
 type FreeGamesPromotionsPrice struct {
 	TotalPrice FreeGamesPromotionsTotalPrice `json:"totalPrice"`
@@ -32,7 +42,7 @@ type FreeGamesPromotionsTotalPrice struct {
 	DiscountPrice int `json:"discountPrice"`
 }
 
-func CheckFreeGame() (string, bool, error) {
+func CheckFreeGame() ([]string, bool, error) {
 	var listurl = "https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=UA&allowCountries=UA"
 	resp, err := http.Get(listurl)
 	if err != nil {
@@ -50,15 +60,37 @@ func CheckFreeGame() (string, bool, error) {
 	}
 	elements := freeGamesPromotions.Data.Catalog.SearchStore.Elements
 	if err != nil {
-		return "", false, err
+		return nil, false, err
 	}
+	var elems []string
 
 	for _, element := range elements {
 		if element.Price.TotalPrice.DiscountPrice == 0 {
 			if listscraper.IsGameInList("listScraper/gameList.txt", listscraper.FormatText(element.Title)) {
-				return element.Title, true, nil
+				elems = append(elems, element.Title)
 			}
 		}
 	}
-	return "", false, fmt.Errorf("game not found")
+	if len(elems) != 0 {
+		return elems, true, nil
+	}
+	return nil, false, fmt.Errorf("game not found")
 }
+
+/*func UpcommingGames(element FreeGamesPromotionsElements) []string {
+	var upcommingGames []string
+	upcommingPromotions := element.UpcommingPromotions.UpcommingPromotionalOffers
+	for _, upcommingPromotion := range upcommingPromotions {
+		promotionOffers := upcommingPromotion.PromotionalOffers
+		for _, promotionOffer := range promotionOffers {
+			if promotionOffer.StartDate != "" {
+				upcommingGames = append(upcommingGames, element.Title)
+				fmt.Printf("Gamesale beggins on %s ", promotionOffer.StartDate)
+				return upcommingGames
+
+			}
+		}
+	}
+	return nil
+}
+*/

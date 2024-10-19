@@ -14,7 +14,7 @@ func NewEditDb(path string) (*EditDb, error) {
 	if err != nil {
 		return nil, err
 	}
-	db.AutoMigrate()
+	db.AutoMigrate(Users{})
 	return &EditDb{Db: db}, nil
 }
 
