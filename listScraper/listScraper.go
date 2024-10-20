@@ -14,7 +14,7 @@ import (
 
 func ParseGameList(listpath string) error {
 	var listurl = "https://playthatgame.co.uk/?action=listbyplatform&platform=1"
-	fiW, err := os.Create(listpath)
+	fiW, err := os.OpenFile(listpath, os.O_RDWR|os.O_CREATE, 0644)
 	if err != nil {
 		return err
 	}
@@ -45,7 +45,7 @@ func ParseGameList(listpath string) error {
 			}
 			counter++
 		})
-		fmt.Println("Successful filewrite")
+		//fmt.Println("Successful filewrite")
 	})
 	return nil
 }

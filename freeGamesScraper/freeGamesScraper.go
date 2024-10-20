@@ -22,18 +22,19 @@ type FreeGamesPromotionsSearchStore struct {
 	Elements []FreeGamesPromotionsElements `json:"elements"`
 }
 type FreeGamesPromotionsElements struct {
-	Title               string                      `json:"title"`
-	Price               FreeGamesPromotionsPrice    `json:"price"`
-	UpcommingPromotions FreeGamesUpcommingPromotion `json:"promotions"`
+	Title              string                     `json:"title"`
+	Price              FreeGamesPromotionsPrice   `json:"price"`
+	UpcomingPromotions FreeGamesUpcomingPromotion `json:"promotions"`
 }
-type FreeGamesUpcommingPromotion struct {
-	UpcommingPromotionalOffers []FreeGamesUpcommingPromotionalOffers `json:"upcomingPromotionalOffers"`
+type FreeGamesUpcomingPromotion struct {
+	UpcomingPromotionalOffers []FreeGamesUpcommingPromotionalOffers `json:"upcomingPromotionalOffers"`
 }
 type FreeGamesUpcommingPromotionalOffers struct {
 	PromotionalOffers []FreeGamesPromotionalOffers `json:"promotionalOffers"`
 }
 type FreeGamesPromotionalOffers struct {
-	StartDate string `json:"startDate"`
+	StartDate          string `json:"startDate"`
+	DiscountPercentage int    `json:"discountPercentage"`
 }
 type FreeGamesPromotionsPrice struct {
 	TotalPrice FreeGamesPromotionsTotalPrice `json:"totalPrice"`
@@ -65,32 +66,36 @@ func CheckFreeGame() ([]string, bool, error) {
 	var elems []string
 
 	for _, element := range elements {
+		newGames := UpcommingGames(element)
+		fmt.Println(newGames)
 		if element.Price.TotalPrice.DiscountPrice == 0 {
 			if listscraper.IsGameInList("listScraper/gameList.txt", listscraper.FormatText(element.Title)) {
 				elems = append(elems, element.Title)
 			}
 		}
 	}
+
 	if len(elems) != 0 {
 		return elems, true, nil
 	}
 	return nil, false, fmt.Errorf("game not found")
 }
 
-/*func UpcommingGames(element FreeGamesPromotionsElements) []string {
+func UpcommingGames(element FreeGamesPromotionsElements) []string {
 	var upcommingGames []string
-	upcommingPromotions := element.UpcommingPromotions.UpcommingPromotionalOffers
+	upcommingPromotions := element.UpcomingPromotions.UpcomingPromotionalOffers
 	for _, upcommingPromotion := range upcommingPromotions {
 		promotionOffers := upcommingPromotion.PromotionalOffers
+		var promOff FreeGamesPromotionalOffers
 		for _, promotionOffer := range promotionOffers {
-			if promotionOffer.StartDate != "" {
-				upcommingGames = append(upcommingGames, element.Title)
-				fmt.Printf("Gamesale beggins on %s ", promotionOffer.StartDate)
-				return upcommingGames
-
-			}
+			promOff = promotionOffer
 		}
+		if promOff.DiscountPercentage == 0 {
+			upcommingGames = append(upcommingGames, element.Title)
+		}
+	}
+	if len(upcommingGames) != 0 {
+		return upcommingGames
 	}
 	return nil
 }
-*/
