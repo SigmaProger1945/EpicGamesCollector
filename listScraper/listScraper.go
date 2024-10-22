@@ -34,7 +34,7 @@ func ParseGameList(listpath string) error {
 		tr.Find("tr").Each(func(ix int, td *goquery.Selection) {
 			t := td.Find("td").Eq(1)
 			game := FormatText(string(t.Text()))
-			if IsGameInList("listScraper/gameList.txt", game) {
+			if IsGameInList(listpath, game) {
 				return
 			}
 			line := fmt.Sprintf("%s\n", game)
@@ -53,7 +53,7 @@ func ParseGameList(listpath string) error {
 func IsGameInList(filepath string, title string) bool {
 	fiR, err := os.Open(filepath)
 	if err != nil {
-		fmt.Println("error opening file")
+		fmt.Println(err, "error opening file")
 		return false
 	}
 	scanner := bufio.NewScanner(fiR)

@@ -43,7 +43,7 @@ type FreeGamesPromotionsTotalPrice struct {
 	DiscountPrice int `json:"discountPrice"`
 }
 
-func CheckFreeGame() ([]string, bool, error) {
+func CheckFreeGame(listpath string) ([]string, bool, error) {
 	var listurl = "https://store-site-backend-static-ipv4.ak.epicgames.com/freeGamesPromotions?locale=en-US&country=UA&allowCountries=UA"
 	resp, err := http.Get(listurl)
 	if err != nil {
@@ -66,10 +66,10 @@ func CheckFreeGame() ([]string, bool, error) {
 	var elems []string
 
 	for _, element := range elements {
-		newGames := UpcommingGames(element)
-		fmt.Println(newGames)
+		/*newGames := UpcommingGames(element)
+		fmt.Println(newGames)*/
 		if element.Price.TotalPrice.DiscountPrice == 0 {
-			if listscraper.IsGameInList("listScraper/gameList.txt", listscraper.FormatText(element.Title)) {
+			if listscraper.IsGameInList(listpath, listscraper.FormatText(element.Title)) {
 				elems = append(elems, element.Title)
 			}
 		}

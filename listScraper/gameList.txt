@@ -12,15 +12,18 @@ halo:combatevolved
 portal2
 minecraft
 streetfighterii
+portal
 thewitcher3
 deusex
 grandtheftautov
+half-life
 callofduty4:modernwarfare
 grandtheftautoiii
 starcraft
 darksouls
 starwars:knightsoftheoldrepublic
 fallout3
+residentevil
 grandtheftauto:sanandreas
 diabloii
 grandtheftauto:vicecity
@@ -31,12 +34,14 @@ tombraider
 teamfortress2
 batman:arkhamasylum
 thesecretofmonkeyisland
+masseffect
 thewalkingdead
 batman:arkhamcity
 princeofpersia:thesandsoftime
 grimfandango
 theelderscrollsiv:oblivion
 counter-strike
+braid
 halo2
 sidmeier'scivilization
 systemshock2
@@ -45,6 +50,7 @@ assassin'screedii
 metalgearsolidv:thephantompain
 residentevil2
 quake
+doom
 rocketleague
 tonyhawk'sproskater2
 simcity
@@ -74,6 +80,7 @@ sidmeier'scivilizationv
 supermeatboy
 ageofempiresii:theageofkings
 maniacmansion:dayofthetentacle
+diablo
 sidmeier'scivilizationii
 starwars:tiefighter
 residentevil7:biohazard
@@ -83,6 +90,7 @@ fortnite
 dishonored
 duneii
 celeste
+fallout
 lemmings
 dukenukem3d
 simcity2000
@@ -100,6 +108,7 @@ mortalkombatii
 shovelknight
 fallout4
 eveonline
+mortalkombat
 hotlinemiami
 burnoutparadise
 deusex:humanrevolution
@@ -115,10 +124,12 @@ cuphead
 warcraftii:tidesofdarkness
 xcom2
 fallout2
+tombraider
 gonehome
 destiny2
 divinity:originalsin2
 tomclancy'ssplintercell:chaostheory
+princeofpersia
 doubledragon
 hearthstone
 borderlands2
@@ -132,6 +143,7 @@ counter-strike:globaloffensive
 everquest
 hollowknight
 jetsetradio
+baldur'sgate
 castlevania
 bubblebobble
 thiefii:themetalage
@@ -143,6 +155,7 @@ finalfantasyviii
 rome:totalwar
 megamanx
 ultimaonline
+destiny
 maxpayne
 assassin'screediv:blackflag
 thewitness
@@ -162,12 +175,14 @@ papers,please
 vampire:themasquerade-bloodlines
 hitman:bloodmoney
 doomii:hellonearth
+maniacmansion
 lumines
 intothebreach
 alanwake
 finalfantasyxiv:arealmreborn
 bastion
 kerbalspaceprogram
+tomclancy'ssplintercell
 kentuckyroutezero
 thechroniclesofriddick:escapefrombutcherbay
 amnesia:thedarkdescent
@@ -175,11 +190,15 @@ earthwormjim
 command&conquer:redalert
 tomclancy'srainbowsixsiege
 thelongestjourney
+callofduty
 segarallychampionship
 goldenaxe
+hitman
 anotherworld
 wizardry:provinggroundsofthemadoverlord
 dungeonmaster
+borderlands
+quakeii
 tonyhawk'sproskater3
 king'squest
 assassin'screed:brotherhood
@@ -192,6 +211,7 @@ herstory
 command&conquer:redalert2
 f.e.a.r.
 valkyriachronicles
+battlefield1
 wipeout
 theoregontrail
 ultimavii:theblackgate
@@ -221,10 +241,13 @@ starwarsjediknight:darkforcesii
 batman:arkhamknight
 indianajonesandthefateofatlantis
 superstreetfighteriv
+ultimai
 unrealtournament2004
 twistedmetal2
 peggle
 condemned
+ageofempires
+systemshock
 brokensword:theshadowofthetemplars
 callofduty:blackops
 noman'ssky
@@ -233,6 +256,8 @@ thesims3
 geometrywars:retroevolved
 mafia:thecityoflostheaven
 fifa12
+grandtheftauto
+farcry
 farcry4
 s.t.a.l.k.e.r.:shadowofchernobyl
 wingcommander
@@ -255,6 +280,7 @@ superhot
 fable
 manhunt
 nightinthewoods
+divinity:originalsin
 bulletstorm
 superbrothers:sword&sworceryep
 seaofthieves
@@ -262,6 +288,7 @@ deadspace2
 fullthrottle
 gabrielknight:sinsofthefathers
 mechwarrior2:31stcenturycombat
+darksoulsii
 worms
 darkestdungeon
 soniccd
@@ -303,9 +330,11 @@ nba2k11
 nethack
 sleepingdogs
 towerfallascension
+assassin'screed
 starwarsjediknightii:jedioutcast
 bard'stale
 hitman2:silentassassin
+tomclancy'srainbowsix
 sidmeier'salphacentauri
 rogue
 needforspeed:mostwanted
@@ -326,6 +355,7 @@ callofduty:blackopsii
 middle-earth:shadowofwar
 il-2sturmovik
 medalofhonor:alliedassault
+titanfall
 talesfromtheborderlands
 bomberman
 thesims4
@@ -358,6 +388,7 @@ battlefield4
 doubledragonii:therevenge
 tomclancy'srainbowsix3:ravenshield
 sinsofasolarempire
+guildwars
 driver
 operationflashpoint:coldwarcrisis
 rollercoastertycoon
@@ -389,11 +420,13 @@ redbaron
 metro2033
 ultimav:warriorsofdestiny
 warhammer40,000:dawnofwarii
+outcast
 planetside2
 defcon
 thetalosprinciple
 turok:dinosaurhunter
 thewolfamongus
+thewitcher
 myth:thefallenlords
 axiomverge
 thedig
@@ -401,6 +434,7 @@ warframe
 owlboy
 noonelivesforever2:aspyinh.a.r.m.'sway
 yearwalk
+sacrifice
 don'tstarve
 riseofnations
 farmville
@@ -409,6 +443,7 @@ thelastexpress
 grandiaii
 skullgirls
 justcause2
+unreal
 starwars:theoldrepublic
 californiagames
 digdug
@@ -443,6 +478,7 @@ childoflight
 callofduty:wwii
 xcom:enemywithin
 prisonarchitect
+thegreatescape
 starwars:shadowsoftheempire
 deusex:mankinddivided
 ultimaunderworldii:labyrinthofworlds
@@ -466,7 +502,9 @@ projectcars2
 finalfantasyxiii
 metro:lastlight
 superstreetfighteriiturbo
+mortalkombat
 swat4
+houseofthedead
 colinmcraerally
 downwell
 fifa14
@@ -497,8 +535,10 @@ colinmcrae:dirt2
 pillarsofeternityii:deadfire
 n+
 metalgearrising:revengeance
+totalwar:warhammer
 assassin'screediii
 stellaris
+blood
 oddworld:abe'sexoddus
 darwinia
 aliensversuspredator
@@ -517,6 +557,7 @@ nhl09
 residentevil:revelations
 warhammer:vermintide2
 thelordoftheringsonline
+rayman
 homeworld2
 masteroforion2
 theevilwithin
@@ -537,9 +578,11 @@ alto'sadventure
 devildaggers
 chuckyeager'saircombat
 micromachines2:turbotournament
+projectcars
 dirtrally
 undying
 ninokuniii:revenantkingdom
+teamfortress
 dinocrisis
 residentevil3
 wingcommanderiv:thepriceoffreedom
@@ -589,6 +632,7 @@ earthwormjim2
 uplink
 tribes2
 payday2
+tomclancy'sghostrecon
 gunpoint
 needforspeed:underground
 gamedevstory
@@ -600,6 +644,8 @@ tomclancy'ssplintercell:blacklist
 eurotrucksimulator2
 thesevencitiesofgold
 colinmcraerally2.0
+descent
+championshipmanager
 dragonageii
 starbound
 risingstorm
@@ -625,7 +671,9 @@ raptor:calloftheshadows
 youdon'tknowjack
 dirt3
 combatmissionii:barbarossatoberlin
+prey
 footballmanager2011
+sidmeier'spirates
 soldieroffortune2
 rocksmith
 assettocorsa
@@ -641,6 +689,7 @@ carmageddonii:carpocalypsenow
 justcause3
 callofduty:blackopsiii
 thebard'stale
+torchlight
 hotlinemiami2:wrongnumber
 passage
 thepandoradirective
@@ -650,14 +699,19 @@ hauntedhouse
 brutallegend
 proevolutionsoccer2015
 championshipmanager2
+legendofgrimrock
 amnesia:amachineforpigs
+stateofdecay
 needforspeedunderground2
 thelordoftherings:thereturnoftheking
 hitman:codename47
 lonesurvivor
+gun
 tacoma
 deusex:invisiblewar
 homeworld:desertsofkharak
+masq
+princeofpersia
 scorchedearth
 needforspeediii:hotpursuit
 command&conquer3:tiberiumwars
@@ -682,6 +736,7 @@ thehitchhiker'sguidetothegalaxy
 catacomb3-d
 killingfloor2
 storiesuntold
+steamworlddig
 command&conquer:generals
 leisuresuitlarry:loveforsail!
 streetrod
@@ -690,9 +745,11 @@ whereintheworldiscarmensandiego?
 freedomfighters
 spore
 cartlife
+watchdogs
 littlebigadventure
 crysis2
 outlast2
+rift
 deadline
 starwars:republiccommando
 zork:grandinquisitor
@@ -718,44 +775,10 @@ blackthorne
 callofduty:advancedwarfare
 realmsofthehaunting
 saintsrow2
+dune
 rememberme
 thomaswasalone
-Sekiro: Shadows Die Twice
-Resident Evil 2 (Remake)
-Control
-The Outer Worlds
-Disco Elysium
-Metro Exodus
-Total War: Three Kingdoms
-Apex Legends
-Star Wars Jedi: Fallen Order
-Gears 5
-Devil May Cry 5
-Borderlands 3
-The Division 2
-Fire Emblem: Three Houses (via emulator)
-Mordhau
-Outer Wilds
-Risk of Rain 2
-Slay the Spire
-Remnant: From the Ashes
-Destiny 2 (Shadowkeep)
-Hades
-Half-Life: Alyx
-Doom Eternal
-Cyberpunk 2077
-Microsoft Flight Simulator
-Crusader Kings III
-Valorant
-Genshin Impact
-Assassin's Creed Valhalla
-Ori and the Will of the Wisps
-Among Us (popularity boost in 2020)
-Call of Duty: Warzone
-Fall Guys: Ultimate Knockout
-Yakuza: Like a Dragon
-Phasmophobia
-Baldur's Gate 3 (Early Access)
+ate 3 (Early Access)
 Mount & Blade II: Bannerlord
 Wolcen: Lords of Mayhem
 Tony Hawk’s Pro Skater 1+2
