@@ -7,11 +7,10 @@ import (
 )
 
 func main() {
-	go listscraper.ParseGameList("C:/IT/go/EpicGamesCollector/listScraper/gameList.txt")
-	freeGameName, isGameInList, err := freegamesscraper.CheckFreeGame("C:/IT/go/EpicGamesCollector/listScraper/gameList.txt")
+	path := "gameList.txt"
+	go listscraper.ParseGameList(path)
+	freeGameName, isGameInList, err := freegamesscraper.CheckFreeGame(path)
 	if err != nil {
-		/*fmt.Println("No good free games. Press Enter to exit...")
-		fmt.Scanln()*/
 		return
 	}
 	fmt.Println(freeGameName, isGameInList, err)

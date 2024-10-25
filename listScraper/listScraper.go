@@ -16,6 +16,7 @@ func ParseGameList(listpath string) error {
 	var listurl = "https://playthatgame.co.uk/?action=listbyplatform&platform=1"
 	fiW, err := os.OpenFile(listpath, os.O_RDWR|os.O_CREATE, 0644)
 	if err != nil {
+		fmt.Println("Error opening FiW", err)
 		return err
 	}
 	resp, err := http.Get(listurl)
@@ -51,9 +52,9 @@ func ParseGameList(listpath string) error {
 }
 
 func IsGameInList(filepath string, title string) bool {
-	fiR, err := os.Open(filepath)
+	fiR, err := os.OpenFile(filepath, os.O_RDONLY|os.O_CREATE, 0644)
 	if err != nil {
-		fmt.Println(err, "error opening file")
+		fmt.Println("Error opening FiR", err)
 		return false
 	}
 	scanner := bufio.NewScanner(fiR)

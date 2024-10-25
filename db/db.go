@@ -3,6 +3,7 @@ package db
 import (
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 type EditDb struct {
@@ -10,17 +11,10 @@ type EditDb struct {
 }
 
 func NewEditDb(path string) (*EditDb, error) {
-	var db, err = gorm.Open(sqlite.Open(path), &gorm.Config{})
+	var db, err = gorm.Open(sqlite.Open(path), &gorm.Config{Logger: logger.Default.LogMode(logger.Silent)})
 	if err != nil {
 		return nil, err
 	}
-	db.AutoMigrate(Users{})
+	db.AutoMigrate(User{})
 	return &EditDb{Db: db}, nil
 }
-
-/*func (slf EditDb) AddToDb(gameName string) {
-	slf.Db.Create(&GameList{Game: gameName})
-}
-func (slf EditDb) DeleteFromDb(gameName string) error {
-	return slf.Db.Where("game = ?", gameName).Delete(&GameList{}).Error
-}*/
